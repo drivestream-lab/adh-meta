@@ -1,0 +1,32 @@
+apiVersion: adh/v1
+kind: Rubric
+lane: eng
+id: rubric-eng
+scale:
+  min: 0
+  max: 3
+threshold_x: 2.7
+hard_fail:
+  - process_integrity
+notes: |
+  Merge uses this rubric after black-box verify.
+  Hermes cannot edit threshold_x. Lead lowers X via a pin PR after grader–Lead agreement ≥ 70%.
+  Auto-merge is off until that pin edit.
+
+dimensions:
+  process_integrity:
+    weight: 0.25
+    blocker_at: 0
+    description: Followed checkout-develop → feature/* → PR as the assigned identity; no merge; one repo per run.
+  spec_fidelity:
+    weight: 0.25
+    description: Change matches the wave spec and does not expand scope.
+  verify:
+    weight: 0.25
+    description: Programme compose up + make verify green. Verify ≠ 0 is a merge block independent of overall score.
+  knowledge:
+    weight: 0.15
+    description: RCA / notes landed on Buzz; reusable finding recorded when verify fails.
+  harness_hygiene:
+    weight: 0.10
+    description: Constitution/skill/mdc issues proposed, not silently patched.

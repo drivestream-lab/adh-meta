@@ -55,5 +55,5 @@ body:
   - type: markdown
     attributes:
       value: |
-        **Board:** https://github.com/orgs/drivestream-lab/projects/1
+        **Board:** https://github.com/orgs/drivestream-lab/projects/4
         **Branch:** `feature/INIT-{COMPONENT}-{NUMBER}-{slug}` → `develop`

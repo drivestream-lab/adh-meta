@@ -1,0 +1,47 @@
+apiVersion: adh/v1
+kind: Roles
+
+human:
+  login: nikd10x
+  merge: true
+  factory: true
+
+apps:
+  adh-dev-backend:
+    app_id: 5508912
+    pem: ~/.config/adh/apps/adh-dev-backend.2026-10-28.private-key.pem
+    repos:
+      - adh
+      - realworld-api
+    used_by: cursor-coder
+  adh-dev-frontend:
+    app_id: 5508950
+    pem: ~/.config/adh/apps/adh-dev-frontend.2026-10-28.private-key.pem
+    repos:
+      - realworld-web
+    used_by: cursor-coder
+  adh-dev-pm:
+    app_id: 5508966
+    pem: ~/.config/adh/apps/adh-dev-pm.2026-10-28.private-key.pem
+    repos:
+      - adh-meta
+      - realworld-meta
+    used_by: hermes-pm
+  adh-reviewer:
+    app_id: 5508973
+    pem: ~/.config/adh/apps/adh-reviewer.2026-10-28.private-key.pem
+    repos:
+      - adh-meta
+      - adh
+      - adh-iac-local
+      - realworld-meta
+      - realworld-api
+      - realworld-web
+      - realworld-local
+    used_by: hermes-reviewer
+    merge: false
+
+spawn:
+  refuse_repo_not_on_identity: true
+  one_repo_per_run: true
+  cannot_merge: true

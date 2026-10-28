@@ -15,7 +15,7 @@ services:
   adh:
     stack: python-backend
     description: ADH orchestrator, Buzz, Hermes
-    status: planned
+    status: live
     teams: [platform-devs, backend-devs]
     links:
       repo: https://github.com/drivestream-lab/adh
@@ -23,7 +23,7 @@ services:
   adh-iac-local:
     stack: compose-local
     description: Shared local infra compose
-    status: planned
+    status: live
     teams: [platform-devs]
     links:
       repo: https://github.com/drivestream-lab/adh-iac-local

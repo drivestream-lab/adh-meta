@@ -1,0 +1,25 @@
+apiVersion: adh/v1
+kind: Rubric
+lane: pm
+id: rubric-pm
+scale:
+  min: 0
+  max: 3
+threshold_x: 2.7
+notes: |
+  Used at PRD / council / Readout gates. Never used to merge product code.
+  Hermes cannot edit threshold_x.
+
+dimensions:
+  citation:
+    weight: 0.25
+    description: Claims cite issues, specs, or Buzz message ids.
+  journeys:
+    weight: 0.25
+    description: User and agent journeys are explicit and testable.
+  req_coverage:
+    weight: 0.30
+    description: Locked P-/R-/G0 statements are covered or explicitly deferred.
+  findings_quality:
+    weight: 0.20
+    description: Findings are specific, actionable, and assigned to a lane.
