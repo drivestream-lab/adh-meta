@@ -9,6 +9,7 @@ human:
 apps:
   adh-dev-backend:
     app_id: 5508912
+    installation_id: 176148055
     pem: ~/.config/adh/apps/adh-dev-backend.2026-10-28.private-key.pem
     repos:
       - adh
@@ -22,6 +23,7 @@ apps:
     used_by: cursor-coder
   adh-dev-pm:
     app_id: 5508966
+    installation_id: 176148025
     pem: ~/.config/adh/apps/adh-dev-pm.2026-10-28.private-key.pem
     repos:
       - adh-meta
@@ -29,6 +31,7 @@ apps:
     used_by: hermes-pm
   adh-reviewer:
     app_id: 5508973
+    installation_id: 176147986
     pem: ~/.config/adh/apps/adh-reviewer.2026-10-28.private-key.pem
     repos:
       - adh-meta
