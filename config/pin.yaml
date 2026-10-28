@@ -1,0 +1,21 @@
+apiVersion: adh/v1
+kind: Pin
+initiative: INIT-ADH-000
+version: g0
+allow_merge: false
+checkpoint_stop: true
+threshold_x: 2.7
+cap:
+  cursor: 2
+  verify: 1
+next:
+  id: g0-dummy
+  role: backend
+  repo: adh
+  action: spawn_coder
+  mode: ask
+  write: false
+  prompt: |
+    G0 dummy. You are the wave implementer on repo adh.
+    Reply with the repository name only.
+    Do not edit files. Do not run git push. Do not merge. Stop.
