@@ -1,0 +1,33 @@
+apiVersion: launchpad/v1
+kind: ScaffoldConfig
+
+org: drivestream-lab
+
+meta:
+  enabled: false
+  engine: cookiecutter
+
+repos:
+  adh:
+    enabled: true
+    engine: cookiecutter
+    template: gh:drivestream-lab/python-fastapi-foundation
+    ref: v0.3.5
+    context:
+      project_name: adh
+      service_name: adh
+      service_description: ADH orchestrator, Buzz, and Hermes
+      default_port: "8080"
+      auth_mode: none
+      has_postgres: "yes"
+      has_redis: "yes"
+      has_kafka: "no"
+      has_s3: "no"
+      has_cratedb: "no"
+      has_emqx: "no"
+      has_telemetry: "yes"
+      has_internal_api: "no"
+
+  adh-iac-local:
+    enabled: false
+    engine: cookiecutter

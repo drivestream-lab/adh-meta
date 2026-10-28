@@ -1,0 +1,29 @@
+apiVersion: launchpad/v1
+kind: ServiceCatalog
+
+org: drivestream-lab
+
+services:
+  adh-meta:
+    stack: meta-pm
+    description: ADH control-plane — PRDs, pin, rubrics, factory config
+    status: live
+    teams: [platform-devs, pm-team]
+    links:
+      repo: https://github.com/drivestream-lab/adh-meta
+
+  adh:
+    stack: python-backend
+    description: ADH orchestrator, Buzz, Hermes
+    status: planned
+    teams: [platform-devs, backend-devs]
+    links:
+      repo: https://github.com/drivestream-lab/adh
+
+  adh-iac-local:
+    stack: compose-local
+    description: Shared local infra compose
+    status: planned
+    teams: [platform-devs]
+    links:
+      repo: https://github.com/drivestream-lab/adh-iac-local

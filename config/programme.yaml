@@ -1,0 +1,9 @@
+apiVersion: launchpad/v1
+kind: Programme
+
+programme: ADH
+programme_slug: adh
+org: drivestream-lab
+meta_repo: adh-meta
+forge:
+  provider: github
