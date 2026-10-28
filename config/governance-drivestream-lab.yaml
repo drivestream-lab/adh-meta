@@ -53,3 +53,5 @@ policy:
 project_board:
   enabled: true
   name: "ADH"
+  number: 4
+  url: https://github.com/orgs/drivestream-lab/projects/4

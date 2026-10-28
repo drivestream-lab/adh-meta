@@ -11,15 +11,12 @@ profiles:
     skills:
       - repo: prayog-skills
         ref: v0.5.6
-    community_skills:
-      - source: github/awesome-copilot
-        ref: v1.0.0
-        skill: prd
     skill_runtimes:
       - .agents/skills
       - .claude/skills
-    codeowners_template: CODEOWNERS.meta-pm
-    harness_pin_template: harness-pin.meta.yaml
+    owners:
+      team: pm-team
+      layout: meta
 
   python-backend:
     constitution:
@@ -28,8 +25,9 @@ profiles:
     skills:
       - repo: prayog-skills
         ref: v0.5.6
-    codeowners_template: CODEOWNERS.python-backend
-    harness_pin_template: harness-pin.python-backend.yaml
+    owners:
+      team: backend-devs
+      layout: app_src
 
   compose-local:
     skills:
@@ -37,7 +35,8 @@ profiles:
         ref: v0.5.6
     skill_runtimes:
       - .agents/skills
-    codeowners_template: CODEOWNERS.meta-pm
-    harness_pin_template: harness-pin.meta.yaml
+    owners:
+      team: platform-devs
+      layout: meta
 
 repos: {}
