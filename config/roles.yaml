@@ -11,11 +11,17 @@ apps:
     app_id: 5508912
     installation_id: 176148055
     pem: ~/.config/adh/apps/adh-dev-backend.2026-10-28.private-key.pem
+    # Org install is repository_selection=all — list every Spec/coder repo here so
+    # app_for_repo prefers a writer over adh-reviewer (Gate 2 needs a distinct APPROVE).
     repos:
       - adh
       - realworld-api
+      - realworld-web
+      - realworld-local
     used_by: cursor-coder
   adh-dev-frontend:
+    # Not installed on the org yet — keep listed for future coder hire; until then
+    # backend writer covers realworld-web Spec open + land (see backend.repos).
     app_id: 5508950
     pem: ~/.config/adh/apps/adh-dev-frontend.2026-10-28.private-key.pem
     repos:
